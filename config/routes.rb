@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
-  get "/users/:id" => "users#show", as: :user
+  root "photos#index"
+
+  devise_for :users
+
   resources :likes
   resources :follow_requests
   resources :comments
@@ -10,7 +13,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root "photos#index"
 
   get "/:username" => "users#show", as: :user
 end
