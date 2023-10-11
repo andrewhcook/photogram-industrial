@@ -23,8 +23,7 @@
     </ul>
   </div>
 </div>
-<h2>Own photos</h2>
 
-<% @user.own_photos.each do |photo| %>
+<% @user.liked_photos.each do |photo| %>
   <%= render "photos/photo", photo: photo %>
 <% end %>

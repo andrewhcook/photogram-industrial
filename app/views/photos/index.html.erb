@@ -3,7 +3,8 @@
 <h1>Photos</h1>
 
 <div id="photos">
-  <% @photos.each do |photo| %>
+<% pp photos%>
+  <% photos.each do |photo| %>
     <%= render photo %>
     <p>
       <%= link_to "Show this photo", photo %>
