@@ -22,7 +22,7 @@
         <% end %>
       </ul>
       <div class="card-body">
-        <%= render "comments/form", comment: photo.comments.build %>
+        <%= render "comments/form", comment: Comment.new(photo_id: photo.id) %>
       </div>
     </div>
   </div>
